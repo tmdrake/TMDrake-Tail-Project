@@ -23,12 +23,19 @@ Open-source purple tech-dergy fursuit tail.
 
 ![Black and purple tail](Black%20and%20purple%20tail%20with%20spikes.jpg)
 
+### Latest assembly finish (2026-07-30)
+
+![Maker finish 1](photo_2026-07-30_09-48-43.jpg)
+
+![Maker finish 2](photo_2026-07-30_18-18-46.jpg)
+
 ## Contents
 - Spike STLs (`Tailspike-*.stl`)
 - Reference photos & fabric links
 - `tail-schematic.svg` — LED/spike layout
 - `DESIGN_NOTES.md` — lighting, sensors, construction notes
 - `TODO.txt` — remaining pattern & documentation work
+- Latest finish photos currently in root (intended home: `2024 project/`)
 
 ## Status
 Almost assembled. Lighting + sensors + app control next.
