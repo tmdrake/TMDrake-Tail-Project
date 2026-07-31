@@ -11,18 +11,19 @@ Open-source purple tech-dergy fursuit tail.
 | Side | Name | Description |
 |------|------|-------------|
 | **Left** in schematic | **Base** | Attaches to the belt / waist. Designed to sit **flush against the body**. |
-| **Right** in schematic | **Tip** | Free end. |
+| **Right** in schematic | **Tip** | Free end. **Two turquoise side horns** sit here (classic dragon-tail layout). |
 
 - **7 dorsal spikes** — roughly uniform size along the upper ridge (spline)
-- **2 side horns** — turquoise, sticking out the sides near the base
+- **2 side horns** — turquoise, sticking out the sides **at the tip**
 - **9 LEDs** total (7 dorsal + 2 side-horn)
 
-The schematic now shows both a **side view** and a **top view** for clearer engineering reference.
+The schematic shows orthographic **side** and **top** views for clear engineering reference.
 
 ## Features
 - Sturdy construction (designed to flip inside-out for service)
 - 9× WS2812B LEDs (ESP32 + WLED)
 - Base kept low-profile so it sits flush at the belt
+- Side horns clustered at the tip like a classic dragon tail
 - Motion-reactive capability via MPU-6050
 - Free official Android app through WLED
 
@@ -45,7 +46,7 @@ The schematic now shows both a **side view** and a **top view** for clearer engi
 ## Contents
 - Spike STLs (`Tailspike-*.stl`)
 - Reference photos & fabric links
-- `tail-schematic.svg` — dual-view (side + top) LED / spike / base-tip layout
+- `tail-schematic.svg` — orthographic dual-view (side + top)
 - `DESIGN_NOTES.md` — full orientation, lighting, power, sensor, and construction notes
 - `TODO.txt` — remaining pattern & documentation work
 - Progress photos: older work in `2024 project/`, new 2026 finish work intended for `2026 project/`

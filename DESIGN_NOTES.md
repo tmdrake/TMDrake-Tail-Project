@@ -5,38 +5,39 @@
 ```
 BELT / BODY  ─────────────────────────  TIP
      |                                              |
-   BASE                                          free end
- (flush)
+   BASE                                    free end +
+ (flush)                                   side horns
 ```
 
 - **Base** = end that attaches to the belt / waist.  
   Designed to sit **flush against the body**. Keep this end low-profile.
 
-- **Tip** = free end pointing away from the wearer.
+- **Tip** = free end pointing away from the wearer.  
+  This is where the **two turquoise side horns** sit (classic dragon-tail layout).
 
 - **Dorsal spikes** = 7 roughly **uniform** spikes running down the upper ridge (spline).
 
-- **Side horns** = 2 turquoise elements sticking out the **sides** near the base.
+- **Side horns** = 2 turquoise elements sticking out the **sides at the tip**.
 
 Do not reverse base and tip when installing electronics or sewing the final skin.
 
-## Dual-view schematic
+## Dual-view schematic (orthographic)
 
 See `tail-schematic.svg` for both:
 
 | View | What it shows |
 |------|---------------|
-| **Side** | Profile: base (left) → tip (right), dorsal spikes on top, side horns near base |
-| **Top**  | Looking down: centerline = dorsal spline, side horns left & right near base |
+| **Side** | Profile: base (left) → tip (right), dorsal spikes on top, side horns at tip |
+| **Top**  | Looking down: centerline = dorsal spline, side horns left & right at tip |
 
 - Magenta dots = dorsal LEDs (7)
-- Cyan / turquoise dots + shapes = side-horn LEDs (2)
+- Cyan / turquoise dots + shapes = side-horn LEDs (2) at tip
 
 ## Lighting layout
 
 - **9× WS2812B** total:
   - 7 LEDs on the dorsal spikes (magenta)
-  - 2 LEDs on the side horns (turquoise)
+  - 2 LEDs on the side horns at the tip (turquoise)
 - Controller: **ESP32** running **WLED** (free official Android app).
 - Recommended first presets: purple breathe, fire flicker, reactive ripple.
 
