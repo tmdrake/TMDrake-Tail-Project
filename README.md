@@ -4,12 +4,24 @@ Open-source purple tech-dergy fursuit tail.
 
 **Long lost tail, several makers later... just gonna open source it.**
 
+![Tail Schematic](tail-schematic.svg)
+
 ## Features
 - Sturdy construction (designed to flip inside-out)
 - 7 dorsal spikes + 2 side horns
 - 9× WS2812B LEDs (ESP32 + WLED)
 - Motion-reactive via MPU-6050
 - Android app control through WLED
+
+## Diagrams & Photos
+
+![Diagram](Diagram.jpg)
+
+![Drake Tail V2](Drake%20tail%20V2.png)
+
+![Spikes](Spikes.png)
+
+![Black and purple tail](Black%20and%20purple%20tail%20with%20spikes.jpg)
 
 ## Contents
 - Spike STLs (`Tailspike-*.stl`)
