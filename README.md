@@ -4,24 +4,27 @@ Open-source purple tech-dergy fursuit tail.
 
 **Long lost tail, several makers later... just gonna open source it.**
 
-![Tail Schematic](tail-schematic.svg)
+![Tail Schematic — Side + Top](tail-schematic.svg)
 
 ## Orientation (read this first)
 
 | Side | Name | Description |
 |------|------|-------------|
 | **Left** in schematic | **Base** | Attaches to the belt / waist. Designed to sit **flush against the body**. |
-| **Right** in schematic | **Tip** | Free end. Spikes become larger and angle outward here. |
+| **Right** in schematic | **Tip** | Free end. |
 
-All **9 LEDs** sit on the dorsal spline (the upper ridge running the length of the tail). Spike density and outward angle increase toward the tip.
+- **7 dorsal spikes** — roughly uniform size along the upper ridge (spline)
+- **2 side horns** — turquoise, sticking out the sides near the base
+- **9 LEDs** total (7 dorsal + 2 side-horn)
+
+The schematic now shows both a **side view** and a **top view** for clearer engineering reference.
 
 ## Features
 - Sturdy construction (designed to flip inside-out for service)
-- 9× WS2812B LEDs along the dorsal spline
-- Spikes concentrated and angled outward toward the tip
+- 9× WS2812B LEDs (ESP32 + WLED)
 - Base kept low-profile so it sits flush at the belt
-- ESP32 + WLED (free official Android app)
 - Motion-reactive capability via MPU-6050
+- Free official Android app through WLED
 
 ## Diagrams & Photos
 
@@ -42,7 +45,7 @@ All **9 LEDs** sit on the dorsal spline (the upper ridge running the length of t
 ## Contents
 - Spike STLs (`Tailspike-*.stl`)
 - Reference photos & fabric links
-- `tail-schematic.svg` — corrected LED / spike / base-tip layout
+- `tail-schematic.svg` — dual-view (side + top) LED / spike / base-tip layout
 - `DESIGN_NOTES.md` — full orientation, lighting, power, sensor, and construction notes
 - `TODO.txt` — remaining pattern & documentation work
 - Progress photos: older work in `2024 project/`, new 2026 finish work intended for `2026 project/`

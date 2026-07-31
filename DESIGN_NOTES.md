@@ -9,22 +9,34 @@ BELT / BODY  ──────────────────────�
  (flush)
 ```
 
-- **Base** (left in schematic) = end that attaches to the belt / waist.  
+- **Base** = end that attaches to the belt / waist.  
   Designed to sit **flush against the body**. Keep this end low-profile.
 
-- **Tip** (right in schematic) = free end pointing away from the wearer.
+- **Tip** = free end pointing away from the wearer.
 
-- **Dorsal spikes** = 7 roughly uniform spikes running down the upper ridge (spline).
+- **Dorsal spikes** = 7 roughly **uniform** spikes running down the upper ridge (spline).
 
-- **Side horns** = 2 turquoise elements sticking out the sides near the base.
+- **Side horns** = 2 turquoise elements sticking out the **sides** near the base.
 
 Do not reverse base and tip when installing electronics or sewing the final skin.
+
+## Dual-view schematic
+
+See `tail-schematic.svg` for both:
+
+| View | What it shows |
+|------|---------------|
+| **Side** | Profile: base (left) → tip (right), dorsal spikes on top, side horns near base |
+| **Top**  | Looking down: centerline = dorsal spline, side horns left & right near base |
+
+- Magenta dots = dorsal LEDs (7)
+- Cyan / turquoise dots + shapes = side-horn LEDs (2)
 
 ## Lighting layout
 
 - **9× WS2812B** total:
-  - 7 LEDs on the dorsal spikes (magenta in schematic)
-  - 2 LEDs on the side horns (turquoise in schematic)
+  - 7 LEDs on the dorsal spikes (magenta)
+  - 2 LEDs on the side horns (turquoise)
 - Controller: **ESP32** running **WLED** (free official Android app).
 - Recommended first presets: purple breathe, fire flicker, reactive ripple.
 
@@ -52,17 +64,9 @@ Power budget (rule of thumb):
 - Spike STLs already in the repo (`Tailspike-*.stl` and scaled variants).
 - Fabric references present as `.url` files.
 
-## Schematic
-
-See `tail-schematic.svg` (updated 2026-07-30).  
-- Left = base / belt (flush)  
-- Right = tip (free end)  
-- Magenta dots = dorsal LEDs  
-- Turquoise dots + shapes = side horns
-
 ## Next engineering steps
 
-1. Confirm final LED string routing and data-in direction.
+1. Confirm final LED string routing and data-in direction (base → tip recommended).
 2. Decide battery + ESP32 pocket location (prefer base side).
 3. Mount and orient MPU-6050; record axis mapping.
 4. Flash WLED, create a 9-LED segment map, test reactive effects.
