@@ -8,23 +8,27 @@ Open-source purple tech-dergy fursuit tail.
 
 ## Orientation
 
-| Side | Name | Description |
-|------|------|-------------|
-| **Left** | **Base** | Belt / waist. Sits **flush against the body**. |
-| **Right** | **Tip** | Free end. **Two turquoise side horns** here. |
+| Side in schematic | Name | Description |
+|-------------------|------|-------------|
+| **Left** | **Base** | Attaches to belt / waist. Sits **flush against the body**. |
+| **Right** | **Tip** | Free end. Two turquoise **side horns** here. |
 
-- **9 dorsal spikes** — uniform along the spline
-- **2 side horns** — turquoise, at the tip
-- **Total: 11 spikes / 11 LEDs**
+### Spikes (11 total)
+- **9 dorsal spikes** — run down the **back** (upper ridge / spline), roughly uniform size
+- **2 side horns** — turquoise, stick out left & right **at the tip** (classic dragon-tail layout)
 
-Orthographic side + top views for engineering reference.
+### LEDs
+- **11× WS2812B** (one per spike)
+- ESP32 + WLED → free official Android app
+- Motion-reactive option via MPU-6050
+
+The schematic is **orthographic** (side + top views) for clear engineering reference.
 
 ## Features
-- Flip-inside-out construction
-- 11× WS2812B (ESP32 + WLED + Android app)
-- Base low-profile at the belt
-- Side horns at tip (classic dragon tail)
-- Motion-reactive via MPU-6050
+- Sturdy, designed to flip inside-out for service
+- Base kept low-profile at the belt
+- Side horns clustered at the tip
+- Full notes in `DESIGN_NOTES.md`
 
 ## Diagrams & Photos
 
@@ -43,13 +47,15 @@ Orthographic side + top views for engineering reference.
 ![Maker finish 2](photo_2026-07-30_18-18-46.jpg)
 
 ## Contents
-- Spike STLs, fabric links, photos
-- `tail-schematic.svg` — orthographic dual-view (11 spikes)
-- `DESIGN_NOTES.md` — full notes
-- `TODO.txt`
-- Progress: `2024 project/`, `2026 project/`
+- Spike STLs (`Tailspike-*.stl`)
+- Reference photos & fabric links
+- `tail-schematic.svg` — orthographic dual-view (11 spikes / 11 LEDs)
+- `DESIGN_NOTES.md` — full orientation, lighting, power, sensor, construction notes
+- `TODO.txt` — remaining pattern work
+- Progress photos: `2024 project/`, intended `2026 project/` for new finish shots
 
 ## Status
-Almost assembled. Next: LED harness, power, sensors, WLED/Android.
+Almost assembled. Documentation locked for build hand-off.  
+Next: LED harness, power, sensors, WLED / Android control.
 
 MIT License · Drake Dragon
