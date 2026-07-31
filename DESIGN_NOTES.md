@@ -9,68 +9,43 @@ BELT / BODY  ──────────────────────�
  (flush)                                   side horns
 ```
 
-- **Base** = end that attaches to the belt / waist.  
-  Designed to sit **flush against the body**. Keep this end low-profile.
-
-- **Tip** = free end pointing away from the wearer.  
-  This is where the **two turquoise side horns** sit (classic dragon-tail layout).
-
-- **Dorsal spikes** = 7 roughly **uniform** spikes running down the upper ridge (spline).
-
-- **Side horns** = 2 turquoise elements sticking out the **sides at the tip**.
-
-Do not reverse base and tip when installing electronics or sewing the final skin.
+- **Base** = end that attaches to the belt / waist. Designed to sit **flush against the body**.
+- **Tip** = free end. **Two turquoise side horns** sit here (classic dragon-tail layout).
+- **Dorsal spikes** = **9** roughly uniform spikes along the upper ridge (spline).
+- **Side horns** = 2 turquoise elements sticking out the sides **at the tip**.
+- **Total spikes = 11** (9 dorsal + 2 side).
 
 ## Dual-view schematic (orthographic)
 
-See `tail-schematic.svg` for both:
+See `tail-schematic.svg`:
 
 | View | What it shows |
 |------|---------------|
-| **Side** | Profile: base (left) → tip (right), dorsal spikes on top, side horns at tip |
+| **Side** | Profile: base (left) → tip (right), 9 dorsal spikes on top, side horns at tip |
 | **Top**  | Looking down: centerline = dorsal spline, side horns left & right at tip |
 
-- Magenta dots = dorsal LEDs (7)
-- Cyan / turquoise dots + shapes = side-horn LEDs (2) at tip
+- Magenta = dorsal LEDs (9)
+- Cyan / turquoise = side-horn LEDs (2) at tip
+- **11 LEDs total** (one per spike)
 
 ## Lighting layout
 
-- **9× WS2812B** total:
-  - 7 LEDs on the dorsal spikes (magenta)
-  - 2 LEDs on the side horns at the tip (turquoise)
-- Controller: **ESP32** running **WLED** (free official Android app).
-- Recommended first presets: purple breathe, fire flicker, reactive ripple.
+- **11× WS2812B** (1 per spike/horn)
+- Controller: **ESP32** + **WLED** (free official Android app)
+- Power: full white ~60 mA/LED → ~660 mA worst case; purple patterns usually much lower. Size LiPo + 5 V regulator with headroom.
 
-Power budget (rule of thumb):
-- Full white ~60 mA per LED → 9 LEDs ≈ 540 mA worst case.
-- Realistic purple patterns usually sit under 200–300 mA average.
-- Size the 5 V regulator and LiPo with headroom.
+## Sensors / power / construction
 
-## Sensors
+- MPU-6050 near base or mid-tail; record axis orientation.
+- Battery + ESP32 access preferred at **base** side.
+- Flip-inside-out design for service.
+- Spike STLs in repo; patterns still needed (see `TODO.txt`).
 
-- **MPU-6050** (or equivalent 6-axis IMU) mounted near the base or mid-tail.
-- Record the final sensor axis orientation so motion-reactive effects behave predictably.
-- Optional local controls (buttons / capacitive pads) near the base.
+## Next steps
 
-## Power & serviceability
-
-- Regulated 5 V from a LiPo pack.
-- Battery and ESP32 should remain reachable after the tail is closed — zipper or access panel at the **base** side preferred.
-- Structure is designed to **flip inside-out** for deeper maintenance.
-
-## Construction reminders
-
-- Patterns still needed for sides, tops, bottoms, and scale structures (see `TODO.txt`).
-- Structure must stay strong enough to invert repeatedly.
-- Spike STLs already in the repo (`Tailspike-*.stl` and scaled variants).
-- Fabric references present as `.url` files.
-
-## Next engineering steps
-
-1. Confirm final LED string routing and data-in direction (base → tip recommended).
-2. Decide battery + ESP32 pocket location (prefer base side).
-3. Mount and orient MPU-6050; record axis mapping.
-4. Flash WLED, create a 9-LED segment map, test reactive effects.
-5. Document wire gauge, connector type, and strain-relief points.
+1. LED string routing (base → tip recommended)
+2. Battery / ESP32 pocket at base
+3. MPU-6050 mount + axis map
+4. WLED 11-LED segment map + reactive effects
 
 MIT License · Drake Dragon
