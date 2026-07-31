@@ -6,12 +6,22 @@ Open-source purple tech-dergy fursuit tail.
 
 ![Tail Schematic](tail-schematic.svg)
 
+## Orientation (read this first)
+
+| Side | Name | Description |
+|------|------|-------------|
+| **Left** in schematic | **Base** | Attaches to the belt / waist. Designed to sit **flush against the body**. |
+| **Right** in schematic | **Tip** | Free end. Spikes become larger and angle outward here. |
+
+All **9 LEDs** sit on the dorsal spline (the upper ridge running the length of the tail). Spike density and outward angle increase toward the tip.
+
 ## Features
-- Sturdy construction (designed to flip inside-out)
-- 7 dorsal spikes + 2 side horns
-- 9× WS2812B LEDs (ESP32 + WLED)
-- Motion-reactive via MPU-6050
-- Android app control through WLED
+- Sturdy construction (designed to flip inside-out for service)
+- 9× WS2812B LEDs along the dorsal spline
+- Spikes concentrated and angled outward toward the tip
+- Base kept low-profile so it sits flush at the belt
+- ESP32 + WLED (free official Android app)
+- Motion-reactive capability via MPU-6050
 
 ## Diagrams & Photos
 
@@ -32,12 +42,12 @@ Open-source purple tech-dergy fursuit tail.
 ## Contents
 - Spike STLs (`Tailspike-*.stl`)
 - Reference photos & fabric links
-- `tail-schematic.svg` — LED/spike layout
-- `DESIGN_NOTES.md` — lighting, sensors, construction notes
+- `tail-schematic.svg` — corrected LED / spike / base-tip layout
+- `DESIGN_NOTES.md` — full orientation, lighting, power, sensor, and construction notes
 - `TODO.txt` — remaining pattern & documentation work
 - Progress photos: older work in `2024 project/`, new 2026 finish work intended for `2026 project/`
 
 ## Status
-Almost assembled. Lighting + sensors + app control next.
+Almost assembled. Next: LED harness, power, sensors, and WLED/Android control.
 
 MIT License · Drake Dragon

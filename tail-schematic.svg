@@ -1,38 +1,81 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="900" height="320">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360">
   <defs>
     <linearGradient id="tailGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#2d0055"/>
-      <stop offset="50%" stop-color="#6b00b3"/>
+      <stop offset="0%" stop-color="#1a0033"/>
+      <stop offset="35%" stop-color="#4b0082"/>
       <stop offset="100%" stop-color="#9b30ff"/>
     </linearGradient>
   </defs>
+
   <!-- Background -->
-  <rect width="900" height="320" fill="#0a0a12"/>
-  <!-- Tail body (side view, tapering) -->
-  <path d="M40,160 C120,90 280,70 450,95 C620,120 780,150 860,175 L860,195 C780,180 620,160 450,145 C280,130 120,150 40,200 Z" fill="url(#tailGrad)" stroke="#c080ff" stroke-width="2"/>
-  <!-- 7 dorsal spikes -->
-  <polygon points="140,95 155,40 170,95" fill="#d0a0ff" stroke="#fff" stroke-width="1"/>
-  <polygon points="230,80 245,25 260,80" fill="#d0a0ff" stroke="#fff" stroke-width="1"/>
-  <polygon points="320,75 335,20 350,75" fill="#d0a0ff" stroke="#fff" stroke-width="1"/>
-  <polygon points="410,85 425,30 440,85" fill="#d0a0ff" stroke="#fff" stroke-width="1"/>
-  <polygon points="500,95 515,40 530,95" fill="#d0a0ff" stroke="#fff" stroke-width="1"/>
-  <polygon points="590,110 605,55 620,110" fill="#d0a0ff" stroke="#fff" stroke-width="1"/>
-  <polygon points="680,125 695,70 710,125" fill="#d0a0ff" stroke="#fff" stroke-width="1"/>
-  <!-- 2 side horns (near base) -->
-  <polygon points="90,130 70,100 110,120" fill="#e0b0ff" stroke="#fff" stroke-width="1"/>
-  <polygon points="90,190 70,220 110,200" fill="#e0b0ff" stroke="#fff" stroke-width="1"/>
-  <!-- LED positions (9 total: 7 spikes + 2 horns) -->
-  <circle cx="155" cy="55" r="6" fill="#ff00ff" stroke="#fff" stroke-width="1"/>
-  <circle cx="245" cy="40" r="6" fill="#ff00ff" stroke="#fff" stroke-width="1"/>
-  <circle cx="335" cy="35" r="6" fill="#ff00ff" stroke="#fff" stroke-width="1"/>
-  <circle cx="425" cy="45" r="6" fill="#ff00ff" stroke="#fff" stroke-width="1"/>
-  <circle cx="515" cy="55" r="6" fill="#ff00ff" stroke="#fff" stroke-width="1"/>
-  <circle cx="605" cy="70" r="6" fill="#ff00ff" stroke="#fff" stroke-width="1"/>
-  <circle cx="695" cy="85" r="6" fill="#ff00ff" stroke="#fff" stroke-width="1"/>
-  <circle cx="85" cy="110" r="5" fill="#00ffff" stroke="#fff" stroke-width="1"/>
-  <circle cx="85" cy="210" r="5" fill="#00ffff" stroke="#fff" stroke-width="1"/>
-  <!-- Labels -->
-  <text x="20" y="30" fill="#c080ff" font-family="sans-serif" font-size="16" font-weight="bold">TMDrake Tail Schematic (9 LEDs)</text>
-  <text x="20" y="280" fill="#a0a0c0" font-family="sans-serif" font-size="12">7 dorsal spikes + 2 side horns · WS2812B · ESP32 + WLED</text>
-  <text x="20" y="300" fill="#8080a0" font-family="sans-serif" font-size="11">Base attaches at left · Tip at right · Designed to flip inside-out</text>
+  <rect width="960" height="360" fill="#0a0a12"/>
+
+  <!-- Title -->
+  <text x="24" y="32" fill="#c080ff" font-family="sans-serif" font-size="18" font-weight="bold">TMDrake Tail Schematic — Corrected Orientation</text>
+
+  <!-- Belt / body reference (left) -->
+  <rect x="8" y="110" width="28" height="140" rx="4" fill="#222233" stroke="#666688" stroke-width="1.5"/>
+  <text x="22" y="185" fill="#8888aa" font-family="sans-serif" font-size="11" text-anchor="middle" transform="rotate(-90 22 185)">BELT / BODY</text>
+
+  <!-- Tail body: base (left) thicker + more flush, tapering strongly toward tip (right) -->
+  <path d="M36,130 
+           C70,115 110,108 160,105 
+           C260,100 380,95 520,105 
+           C660,115 780,145 910,185 
+           L910,205 
+           C780,175 660,155 520,150 
+           C380,145 260,155 160,165 
+           C110,170 70,175 36,190 
+           Z" 
+        fill="url(#tailGrad)" stroke="#c080ff" stroke-width="2.5"/>
+
+  <!-- Base attachment zone (flush to body) -->
+  <path d="M36,130 L36,190 L55,185 L55,135 Z" fill="#2a0044" stroke="#a060ff" stroke-width="1" opacity="0.7"/>
+  <text x="70" y="250" fill="#a0a0c0" font-family="sans-serif" font-size="12" font-weight="bold">BASE</text>
+  <text x="70" y="266" fill="#8080a0" font-family="sans-serif" font-size="11">(attaches to belt — flush against body)</text>
+
+  <!-- Tip label -->
+  <text x="860" y="250" fill="#a0a0c0" font-family="sans-serif" font-size="12" font-weight="bold">TIP</text>
+  <text x="820" y="266" fill="#8080a0" font-family="sans-serif" font-size="11">(free end, angled spikes)</text>
+
+  <!-- 9 dorsal LEDs along the spline (concentrated more toward tip) -->
+  <!-- Positions chosen so spacing tightens and size grows toward tip -->
+  <g id="leds">
+    <!-- LED 1 (near base) -->
+    <circle cx="150" cy="95" r="5" fill="#ff00ff" stroke="#fff" stroke-width="1.2"/>
+    <!-- LED 2 -->
+    <circle cx="230" cy="88" r="5.5" fill="#ff00ff" stroke="#fff" stroke-width="1.2"/>
+    <!-- LED 3 -->
+    <circle cx="320" cy="85" r="6" fill="#ff00ff" stroke="#fff" stroke-width="1.2"/>
+    <!-- LED 4 -->
+    <circle cx="410" cy="88" r="6.5" fill="#ff00ff" stroke="#fff" stroke-width="1.2"/>
+    <!-- LED 5 -->
+    <circle cx="510" cy="95" r="7" fill="#ff00ff" stroke="#fff" stroke-width="1.2"/>
+    <!-- LED 6 -->
+    <circle cx="600" cy="108" r="7" fill="#ff00ff" stroke="#fff" stroke-width="1.2"/>
+    <!-- LED 7 -->
+    <circle cx="690" cy="125" r="7.5" fill="#ff00ff" stroke="#fff" stroke-width="1.2"/>
+    <!-- LED 8 -->
+    <circle cx="780" cy="148" r="8" fill="#ff00ff" stroke="#fff" stroke-width="1.2"/>
+    <!-- LED 9 (tip) -->
+    <circle cx="870" cy="175" r="8" fill="#ff00ff" stroke="#fff" stroke-width="1.2"/>
+  </g>
+
+  <!-- Dorsal spikes (larger and more pronounced toward tip, angled outward) -->
+  <!-- Spike shapes grow and lean outward as they approach tip -->
+  <polygon points="145,95 155,55 165,95" fill="#d0a0ff" stroke="#fff" stroke-width="1" opacity="0.85"/>
+  <polygon points="225,88 238,42 250,88" fill="#d0a0ff" stroke="#fff" stroke-width="1" opacity="0.9"/>
+  <polygon points="315,85 330,35 345,85" fill="#d0a0ff" stroke="#fff" stroke-width="1"/>
+  <polygon points="405,88 422,30 440,88" fill="#d0a0ff" stroke="#fff" stroke-width="1"/>
+  <polygon points="505,95 525,32 545,95" fill="#d0a0ff" stroke="#fff" stroke-width="1"/>
+  <polygon points="595,108 618,40 640,108" fill="#d0a0ff" stroke="#fff" stroke-width="1"/>
+  <polygon points="685,125 712,50 738,125" fill="#d0a0ff" stroke="#fff" stroke-width="1"/>
+  <!-- Tip-side angled spikes / horns (pointing more outward) -->
+  <polygon points="770,148 800,70 820,155" fill="#e0b0ff" stroke="#fff" stroke-width="1.5"/>
+  <polygon points="850,172 885,95 910,185" fill="#e0b0ff" stroke="#fff" stroke-width="1.5"/>
+
+  <!-- Legend -->
+  <text x="24" y="310" fill="#c080ff" font-family="sans-serif" font-size="13">9× WS2812B along dorsal spline (magenta dots)</text>
+  <text x="24" y="330" fill="#a0a0c0" font-family="sans-serif" font-size="12">Spikes concentrated &amp; angled outward toward tip · Base designed to sit flush against the body at the belt</text>
+  <text x="24" y="348" fill="#8080a0" font-family="sans-serif" font-size="11">ESP32 + WLED · Designed to flip inside-out for service</text>
 </svg>
