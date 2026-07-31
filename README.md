@@ -35,7 +35,7 @@ Open-source purple tech-dergy fursuit tail.
 - `tail-schematic.svg` — LED/spike layout
 - `DESIGN_NOTES.md` — lighting, sensors, construction notes
 - `TODO.txt` — remaining pattern & documentation work
-- Latest finish photos currently in root (intended home: `2024 project/`)
+- Progress photos: older work in `2024 project/`, new 2026 finish work intended for `2026 project/`
 
 ## Status
 Almost assembled. Lighting + sensors + app control next.
